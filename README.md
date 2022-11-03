@@ -55,42 +55,66 @@ D7 = X Y Z
 ## Figure -04 8 to 3 Decoder implementation 
 
 ### Procedure
-/* write all the steps invloved */
+Step 1: Open Quartus II and select new project and choose the file location.
+
+Step 2: Module Declaration. Module should have the file name.
+
+Step 3: Input-Output Delecaration.
+
+Step 4: Use assign to define the functionality of logic circuits.
+
+Step 5: At the end give endmodule.
+
+Step 6: Run the program and choose RTL viewer to get RTL realization.
 
 
 
 ### PROGRAM 
 /*
 Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by:D.Amarnath Reddy
+RegisterNumber:212221240012  
 */
+## Encoder:
+```
+module encode(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
+output a,b,c;
+input d0,d1,d2,d3,d4,d5,d6,d7;
+or(a,d4,d5,d6,d7);
+or(b,d2,d3,d6,d7);
+or(c,d1,d3,d5,d7);
+endmodule
+```
+## decoder:
+```
+module encode(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
+output a,b,c;
+input d0,d1,d2,d3,d4,d5,d6,d7;
+or(a,d4,d5,d6,d7);
+or(b,d2,d3,d6,d7);
+or(c,d1,d3,d5,d7);
+endmodule
+```
+### RTL LOGIC
+## Encoder
+![1](https://user-images.githubusercontent.com/94165103/199717651-67265a38-62a9-4be3-b9f5-88515dae91db.png)
 
+### TIMING DIGRAMS 
+## Encoder
+![2](https://user-images.githubusercontent.com/94165103/199718048-65005a89-90e9-4215-8b83-77ca7097d65d.jpg)
 
-
-
-
-
-### RTL LOGIC  
-
-
-
-
-
-
-
-
-### TIMING DIGRAMS  
-
-
-
-
-
-### TRUTH TABLE 
-
-
-
-
-
+### TRUTH TABLE
+## Encoder:
+![3](https://user-images.githubusercontent.com/94165103/199718317-726831ac-f58e-4ed5-a27c-b78830fcd0f4.png)
+### RTL LOGIC
+## decoder:
+![4](https://user-images.githubusercontent.com/94165103/199718573-34416cad-1ae9-4da5-ae74-c3a3ea04467d.png)
+### TIMING DIGRAMS
+## decoder:
+![5](https://user-images.githubusercontent.com/94165103/199718726-9012943c-3707-4b31-8561-45d409864d6b.png)
+### TRUTH TABLE
+## decoder:
+![6](https://user-images.githubusercontent.com/94165103/199718954-7ab424d5-fe7a-418c-9e6e-9acb0819aab0.png)
 
 ### RESULTS 
+8 to 3 Encoder and 3to8 Decoder has been implemented by using verilog and its outputs are validated.
